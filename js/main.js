@@ -2,13 +2,16 @@ jQuery(document).ready(function($){
 	//if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
 	var MQL = 1170;
 
+	// initialize Julia fractal
+	var julia = new Julia(document.getElementById('js-julia-canvas')[0]);
+
 	//primary navigation slide-in effect
 	if($(window).width() > MQL) {
 		var headerHeight = $('.cd-header').height();
 		$(window).on('scroll',
 		{
 	        previousTop: 0
-	    }, 
+	    },
 	    function () {
 		    var currentTop = $(window).scrollTop();
 		    //check if user is scrolling up
