@@ -10,50 +10,60 @@
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
 
+
 	<title></title>
+	<style type="text/css">
+	canvas {
+		display: block;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	</style>
 </head>
 <body>
-	<header class="cd-header">
-		<!-- <div class="cd-logo"><a href="#0"><img src="img/cd-logo.svg" alt="Logo"></a></div> -->
-		<a class="cd-primary-nav-trigger" href="#0">
-			<span class="cd-menu-text">Menu</span><span class="cd-menu-icon"></span>
-		</a> <!-- cd-primary-nav-trigger -->
+	<header class="header">
+		<div class="logo"><a href="#0"><img src="img/logo.png" alt="Logo"></a></div>
+		<a class="primary-nav-trigger" href="#0">
+			<span class="menu-text">Menu</span><span class="menu-icon"></span>
+		</a> <!-- primary-nav-trigger -->
 	</header>
 
 	<nav>
-		<ul class="cd-primary-nav">
-			<li class="cd-label">Soundscapes</li>
+		<ul class="primary-nav">
+			<li class="label">Soundscapes</li>
 
-			<li><a href="#0">Fractal 1</a></li>
+			<li><a class="snowflake" href="#0">Koch Snowflake</a></li>
 			<li><a href="#0">Fractal 2</a></li>
 			<li><a href="#0">Fractal 3</a></li>
 
-			<li class="cd-label">Meet the team</li>
+			<li class="label">Meet the team</li>
 
 			<li><a href="#0">Michael Angelo</a></li>
 			<li><a href="#0">Steph Reaves</a></li>
 			<li><a href="#0">Steph Tzang</a></li>
 			<li><a href="#0">Ashley Baldwin Hunter</a></li>
 			<li><a href="#0">Missy Wimberly</a></li>
-			<li class="cd-label">Follow us</li>
+			<li class="label">Follow us</li>
 
-			<li class="cd-social cd-facebook"><a href="#0">Facebook</a></li>
-			<li class="cd-social cd-twitter"><a href="#0">Twitter</a></li>
+			<li class="social facebook"><a href="#0">Facebook</a></li>
+			<li class="social twitter"><a href="#0">Twitter</a></li>
 		</ul>
 	</nav>
 
-	<section class="cd-intro">
+	<section class="intro">
 		<h1>Spotify Hackathon: Soundscapes</h1>
-		<canvas class="js-julia-canvas canvas">
-    </canvas>
+
+		<canvas id="canvas" class="js-julia-canvas"></canvas>
 	</section>
 
-	<main class="cd-main-content">
-		<div class="cd-container">
+	<main class="main-content">
+		<div class="container">
 		</div>
 	</main>
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/julia.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
+	  <script type="text/javascript" src="js/kochanimated.js"></script>
 </body>
 </html>
