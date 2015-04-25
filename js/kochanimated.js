@@ -1,4 +1,5 @@
 $('.snowflake').on('click', function(){
+	$('.intro').css('background', "url('img/winter.png')");
 	var canvas = document.getElementById("canvas"),
 		context = canvas.getContext("2d"),
 		width = canvas.width = window.innerWidth,
