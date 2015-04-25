@@ -42,6 +42,21 @@ Modules - reusable parts of our design
   clear: both;
 }
 
+.team{
+  text-align: center;
+}
+.team li{
+  display: inline-block;
+  width: 19%;
+  background: url('img/mike-before.png');
+  background-size: 20%;
+}
+.team li img{
+  border-radius: 100%;
+  width: 70%;
+}
+
+
 /* --------------------------------
 
 Main components
