@@ -2,8 +2,11 @@ jQuery(document).ready(function($){
 	//if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
 	var MQL = 1170;
 
-	// initialize Julia fractal
-	var julia = new Julia(document.getElementById('js-julia-canvas')[0]);
+	$('#temp').hide();
+	// initialize Recursive Square
+
+	var canvas = document.getElementById("canvas");
+	var square = new RecursiveSquare(canvas);
 
 	//primary navigation slide-in effect
 	if($(window).width() > MQL) {
