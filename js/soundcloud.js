@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	
+
 	var scAPI = 'http://api.soundcloud.com',
     scClientID = '54c92eba43154126e2a9c5046d707dd2',
     scStreamURL = scAPI + '/tracks/%TRACK_ID%/stream?client_id=' + scClientID,
@@ -19,7 +19,7 @@ $(document).ready(function() {
 	var getTimeFormat = function(seconds) {
 	  var minutes = parseInt(seconds / 60, 10),
 	      seconds = ('0' + parseInt(seconds % 60, 10)).substr(-2, 2);
-	  
+
 	  return (minutes + ':' + seconds);
 	};
 
@@ -28,13 +28,13 @@ $(document).ready(function() {
 	audio.addEventListener('loadedmetadata', function() {
 	  // set duration of the track
 	  // duration.innerHTML = getTimeFormat(audio.duration);
-	  
-	  
+
+
 	  // add play/pause button functionality
 	  snowflake.addEventListener('click', function() {
 	    audio[(audio.paused) ? 'play' : 'pause']();
 	  }, false);
-	  
+
 	  // add listener to audio api events
 	  audio.addEventListener('playing', function() {
 	    play.innerHTML = 'Pause';
@@ -42,10 +42,10 @@ $(document).ready(function() {
 	  audio.addEventListener('pause', function() {
 	    play.innerHTML = 'Play';
 	  });
-	  audio.addEventListener('timeupdate', function() {    
+	  audio.addEventListener('timeupdate', function() {
 	    timePlayed.innerHTML = getTimeFormat(audio.currentTime);
 	  });
-	  
+
 	  // enable play/pause button
 	  play.disabled = false;
 	});
